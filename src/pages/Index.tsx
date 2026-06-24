@@ -223,7 +223,10 @@ export default function Index() {
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
             <span className="font-sans text-xl font-bold text-foreground">А</span>
           </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">АНО НИК</span>
+          <div className="flex flex-col items-start">
+            <span className="font-sans text-xl font-semibold tracking-tight text-foreground leading-tight">АНО НИК</span>
+            <span className="font-mono text-[10px] text-foreground/50 tracking-wide leading-tight">Научно Исследовательский Комплекс</span>
+          </div>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
