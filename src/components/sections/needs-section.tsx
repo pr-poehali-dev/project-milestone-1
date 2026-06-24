@@ -47,7 +47,7 @@ export function NeedsSection() {
     >
       <div className="mx-auto w-full max-w-7xl">
         <div
-          className={`mb-8 transition-all duration-700 md:mb-12 ${
+          className={`mb-8 text-center transition-all duration-700 md:mb-12 ${
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
           }`}
         >
