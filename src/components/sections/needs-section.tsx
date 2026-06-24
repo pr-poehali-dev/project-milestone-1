@@ -154,6 +154,10 @@ export function NeedsSection() {
               <p className="text-sm leading-relaxed text-foreground/70">
                 Ваше пожертвование идёт напрямую на создание протезов и исследования нейро-интерфейсов для людей, получивших увечья.
               </p>
+              <div className="mt-4 rounded-md border border-foreground/15 bg-foreground/5 px-4 py-3">
+                <p className="mb-0.5 font-mono text-xs text-foreground/50 uppercase tracking-widest">Перевод по СБП / Озон банк</p>
+                <p className="font-sans text-lg font-medium text-foreground tracking-wide">+7 977 183-01-79</p>
+              </div>
             </div>
             <div className="mt-6 space-y-3">
               <div className="flex flex-wrap gap-2">
