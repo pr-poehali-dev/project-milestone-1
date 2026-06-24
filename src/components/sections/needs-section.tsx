@@ -2,6 +2,7 @@ import { useReveal } from "@/hooks/use-reveal"
 import { MagneticButton } from "@/components/magnetic-button"
 import { useState, type FormEvent } from "react"
 import Icon from "@/components/ui/icon"
+import func2url from "../../backend/func2url.json"
 
 const needs = [
   {
@@ -30,11 +31,18 @@ export function NeedsSection() {
   const { ref, isVisible } = useReveal(0.3)
   const [formData, setFormData] = useState({ name: "", contact: "", help: "" })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!formData.name || !formData.contact) return
-    await new Promise((r) => setTimeout(r, 1000))
+    setLoading(true)
+    await fetch(func2url["send-email"], {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+    setLoading(false)
     setSubmitted(true)
     setFormData({ name: "", contact: "", help: "" })
     setTimeout(() => setSubmitted(false), 5000)
@@ -122,8 +130,8 @@ export function NeedsSection() {
                   placeholder="Опишите коротко..."
                 />
               </div>
-              <MagneticButton variant="primary" size="sm" className="w-full">
-                Откликнуться
+              <MagneticButton variant="primary" size="sm" className="w-full" disabled={loading}>
+                {loading ? "Отправляем..." : "Откликнуться"}
               </MagneticButton>
               {submitted && (
                 <p className="text-center font-mono text-xs text-foreground/70">Спасибо! Мы свяжемся с вами.</p>
