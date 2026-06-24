@@ -2,7 +2,7 @@ import { useReveal } from "@/hooks/use-reveal"
 import { MagneticButton } from "@/components/magnetic-button"
 import { useState, type FormEvent } from "react"
 import Icon from "@/components/ui/icon"
-import func2url from "../../backend/func2url.json"
+import func2url from "../../../backend/func2url.json"
 
 const needs = [
   {
