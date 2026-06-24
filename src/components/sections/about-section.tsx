@@ -42,38 +42,45 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
             </div>
           </div>
 
-          {/* Right side - Stats with creative layout */}
-          <div className="flex flex-col justify-center space-y-6 md:space-y-12">
-            {[
-              { value: "500+", label: "Людей", sublabel: "Вернули возможность движения", direction: "right" },
-              { value: "9", label: "Патентов", sublabel: "Собственные разработки", direction: "left" },
-              { value: "15", label: "Учёных", sublabel: "В команде R&D", direction: "right" },
-            ].map((stat, i) => {
-              const getRevealClass = () => {
-                if (!isVisible) {
-                  return stat.direction === "left" ? "-translate-x-16 opacity-0" : "translate-x-16 opacity-0"
-                }
-                return "translate-x-0 opacity-100"
-              }
-
-              return (
+          {/* Right side - Plans */}
+          <div
+            className={`flex flex-col justify-center space-y-6 transition-all duration-700 ${
+              isVisible ? "translate-x-0 opacity-100" : "translate-x-16 opacity-0"
+            }`}
+            style={{ transitionDelay: "300ms" }}
+          >
+            <p className="font-mono text-xs uppercase tracking-widest text-foreground/50">Наши планы</p>
+            <div className="space-y-5">
+              {[
+                {
+                  icon: "📡",
+                  title: "Кружок радиоэлектроники",
+                  desc: "Дети научатся собирать схемы, паять и понимать устройство электроники с нуля",
+                },
+                {
+                  icon: "🤖",
+                  title: "Кружок роботостроения",
+                  desc: "Проектирование и сборка роботов — от простых механизмов до программируемых устройств",
+                },
+                {
+                  icon: "🏫",
+                  title: "Открытие детских центров",
+                  desc: "Планируем запустить кружки в нескольких городах, чтобы дать детям доступ к технологиям будущего",
+                },
+              ].map((item, i) => (
                 <div
                   key={i}
-                  className={`flex items-baseline gap-4 border-l border-foreground/30 pl-4 transition-all duration-700 md:gap-8 md:pl-8 ${getRevealClass()}`}
-                  style={{
-                    transitionDelay: `${300 + i * 150}ms`,
-                    marginLeft: i % 2 === 0 ? "0" : "auto",
-                    maxWidth: i % 2 === 0 ? "100%" : "85%",
-                  }}
+                  className="flex items-start gap-4 border-l border-foreground/30 pl-4"
+                  style={{ transitionDelay: `${450 + i * 150}ms` }}
                 >
-                  <div className="text-3xl font-light text-foreground md:text-6xl lg:text-7xl">{stat.value}</div>
+                  <span className="text-2xl">{item.icon}</span>
                   <div>
-                    <div className="font-sans text-base font-light text-foreground md:text-xl">{stat.label}</div>
-                    <div className="font-mono text-xs text-foreground/60">{stat.sublabel}</div>
+                    <div className="mb-1 font-sans text-base font-medium text-foreground">{item.title}</div>
+                    <div className="font-mono text-xs leading-relaxed text-foreground/60">{item.desc}</div>
                   </div>
                 </div>
-              )
-            })}
+              ))}
+            </div>
           </div>
         </div>
 
