@@ -148,7 +148,7 @@ export function NeedsSection() {
           >
             <div>
               <p className="mb-1 font-mono text-xs text-foreground/50 uppercase tracking-widest">Поддержать</p>
-              <h3 className="mb-3 font-sans text-2xl font-light text-foreground md:text-3xl">
+              <h3 className="mb-3 font-sans text-lg font-light text-foreground md:text-xl">
                 Каждый рубль — это шаг к новой жизни
               </h3>
               <p className="text-sm leading-relaxed text-foreground/70">
