@@ -15,31 +15,31 @@ export function ServicesSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Услуги
+            Направления
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Наши компетенции</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Что мы создаём</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
           {[
             {
-              title: "Веб-разработка",
-              description: "Создание современных веб-приложений любой сложности",
+              title: "Бионические протезы",
+              description: "Функциональные протезы рук и ног с естественным управлением и тактильной обратной связью",
               direction: "top",
             },
             {
-              title: "UI/UX Дизайн",
-              description: "Проектирование удобных и красивых интерфейсов",
+              title: "Нейро-интерфейсы",
+              description: "Системы прямой связи мозга и устройства, возвращающие управление телом и движением",
               direction: "right",
             },
             {
-              title: "Мобильные приложения",
-              description: "Кроссплатформенная разработка для iOS и Android",
+              title: "Искусственный интеллект",
+              description: "AI-алгоритмы, которые распознают намерения человека и адаптируют работу протеза в реальном времени",
               direction: "left",
             },
             {
-              title: "Консалтинг",
-              description: "Техническая экспертиза и стратегическое планирование",
+              title: "Роботизация",
+              description: "Робототехнические комплексы и экзоскелеты для реабилитации и расширения возможностей человека",
               direction: "bottom",
             },
           ].map((service, i) => (
