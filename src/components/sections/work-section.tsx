@@ -43,6 +43,13 @@ export function WorkSection() {
               year: "2024",
               direction: "left",
             },
+            {
+              number: "04",
+              title: "BioLeg",
+              category: "Бионический протез ноги",
+              year: "2024",
+              direction: "right",
+            },
           ].map((project, i) => (
             <ProjectCard key={i} project={project} index={i} isVisible={isVisible} />
           ))}
