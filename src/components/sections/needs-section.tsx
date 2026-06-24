@@ -149,7 +149,7 @@ export function NeedsSection() {
             </div>
             <div className="mt-6 space-y-3">
               <div className="flex flex-wrap gap-2">
-                {["500 ₽", "1 000 ₽", "5 000 ₽"].map((amount) => (
+                {["500 ₽", "1 000 ₽", "5 000 ₽", "10 000 ₽"].map((amount) => (
                   <button
                     key={amount}
                     className="rounded-full border border-foreground/20 px-3 py-1 font-mono text-xs text-foreground/70 transition-all hover:border-foreground/50 hover:text-foreground"
