@@ -158,6 +158,15 @@ export function NeedsSection() {
                   </button>
                 ))}
               </div>
+              <div className="flex items-center gap-2">
+                <input
+                  type="number"
+                  min="1"
+                  placeholder="Другая сумма"
+                  className="w-full border-b border-foreground/30 bg-transparent py-1.5 font-mono text-sm text-foreground placeholder:text-foreground/40 focus:border-foreground/50 focus:outline-none"
+                />
+                <span className="font-mono text-sm text-foreground/50">₽</span>
+              </div>
               <MagneticButton variant="secondary" size="sm" className="w-full">
                 Пожертвовать
               </MagneticButton>
